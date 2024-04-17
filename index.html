@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> Darkside of Chocolate</title>
+   <link rel="icon" href="https://t3.ftcdn.net/jpg/04/82/20/18/360_F_482201868_x7MTozlRTjuWuOjTsC2nf8ixnPsaCHS5.jpg" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="reset-webview.css" rel="stylesheet" type="text/css" />
+   
+</head>
+  <button id="theme-button-new">Toggle Theme</button>
+<body>
+  <main>
+    <ul>
+      <div class= navbar>
+        <li><a  href="#default">Home</a></li>
+        <li><a  href="#AboutSection">About</a></li>
+        <li><a href="#thumbnail">Resources</a></li>
+        <!--- Add to Nav Bar --->
+        <li ><button id="theme-button">Toggle Theme</button></li>
+      </div>
+    </ul>
+<!--- Drop code starts here -->    
+    <h1 class= header-container>
+      The Darkside of Chocolate
+      <span class="drop"></span>
+      <span class="drop"></span>
+      <span class="drop"></span>
+      <span class="drop"></span>
+      <span class="drop"></span>
+      <span class="drop"></span>
+      <span class="drop"></span>
+    </h1>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Nosifer&display=swap" rel="stylesheet"> 
+<!--- Drop code starts here --> 
+<!--- Slideshow code starts here --> 
+    <div class="mySlides fade">
+        <img src="https://justkai.org.nz/static/04708b61162c883ccbc190ecd8f9dfc1/00742/world-day-against-child-labour-2022-fb.jpg" style="width:100%">
+      </div>
+
+     <div class="mySlides fade">
+
+       <img src="https://www.witnessimage.com/site/wp-content/uploads/2022/12/Ghana003.jpg" style="width:100%">
+     </div>
+
+     <div class="mySlides fade">
+       <img src="https://www.confectionerynews.com/var/wrbm_gb_food_pharma/storage/images/1/3/4/1/2051431-1-eng-GB/Nestle-Cargill-and-ADM-face-child-slavery-case.jpg" style="width:100%">
+     </div>
+
+
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+<!--- Slideshow code ends here --> 
+      
+
+    <br>
+    <br>
+    <p class="description" id=AboutSection>Ghana & Côte d'Ivoire are the world's largest cocoa producers, making up approximately 60% of all cocoa harvested. But who exactly is harvesting this fruit of such a versatile product? Children! A survey conducted by Tulane University in 2013-14 showed that an estimated 1.4 million children aged 5 years old to 11 years old worked in agriculture in cocoa-growing areas. Those numbers combined with the children in Ghana and other West African countries rack up a disgraceful 2.3 million children (2018-2019, Statista)!
+    </p>
+    <br>
+      
+    <p> The monsters behind the child labor in Ghana & Côte d'Ivoire are the companies selling these unethnically sourced treats to you. Here's a list showing the top ten companies in this lucrative business: </p>
+    <a  class= TenCompanies href= https://fooddigital.com/food/top-10-largest-chocolate-companies target="_blank" rel="noopener noreferrer"> Top 10 Chocolate Companies</a>
+    <br>
+    <br>
+       
+    <br>
+    <br>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DyZnkXQUL6M?si=ezJezGnIb_dk2fB5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="thumbnail"></iframe>
+    <br>
+     <p> This video curated by Al Jazeera touches on the child labour cases that are specific to the cocoa planatations in Ghana. </p>
+    <br>
+    <br>
+
+    <p class=child-traffick > Chocolate companies like Nestlé will do anything to make a profit off of marginalized people in West Africa. Nestlé has been accused of trafficking six children from their home country of Mali (located north of the country) and put to work on a plantation in Ivory Coast. These children were promised monetary compensation and/or education but were instead forced to work on plantations with little to no compensation. 
+    </p>
+
+
+<a href=https://www.business-humanrights.org/en/latest-news/us-supreme-court-dismisses-claims-against-nestl%C3%A9-and-cargill-and-remands-to-trial-court/> Nestle Case </a> 
+<br>
+<br>
+<br>
+<br>
+    <div class="petition" id="petition">
+
+        <h2 id=petition-header >Sign Our Petition 📢</h2>
+        <div class="petition-container">
+
+
+          <div class="petition-para">
+            <p>Chocolate companies that take advantage of marginalized families in Ghana, Ivory Coast, and other parts of West Africa need to be held accountable for their greediness. Join us by signing this petition to support the cause and put an end to the dark side of chocolate.</p>
+          </div>
+
+          <div class="signatures">
+            <p>🖊️ Cherry from Lawrenceville supports this.</p>
+            <p>🖊️ Aderinsola from Lawrenceville supports this.</p>
+            <p>🖊️ Jadyn from Dacula supports this.</p>
+              <div id= counter>
+          
+              </div>
+              <div>
+                <p id = counter>  </p>
+          </div>
+
+        </div>
+              
+
+          
+      <!--- Sign Petition Form --->
+      <form id="sign-petition" title="sign-petition">
+        <div>
+          <label class=petition-label > Name: </label>
+          <input type="text" id="name" name="name">
+        </div>
+        <div>
+          <label class=petition-label> Hometown: </label>
+          <input type="text" id="hometown" name="hometown">
+        </div>
+        <div>
+          <label class=petition-label> Email: </label>
+          <input type="text" id="email" name="email">
+        </div>
+       
+      </form>
+
+          
+      <br>
+          <br>
+
+          <br>
+          <br>
+          <br>
+       <!--- Sign Now Button --->
+      <button id="sign-now-button">Sign Now</button>
+
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+    <div class= footer >
+      <p class= footer-text>What's the hidden story behind your favorite treat...?
+        <br>
+      <a href= "https://youtu.be/zEN4hcZutO0?si=-ZwC8x9wPO80F0Hl" target="_blank" rel="noopener noreferrer"> Click Here</a></p>
+      <style>
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #552c16;
+        color: white;
+        text-align: center; 
+        font-size: 15px;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-family: "Curlz MT";
+      }
+      </style>
+      </div>  
+<!---  Sign now button ends here --->
+<!--- Modal -->
+      <div id="thanks-modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div id="modal-text-container">
+            <!-- text here -->
+             <p id="thanks-modal-content"> Thank you for contributing to ending child slavery implented by Western corporations in Côte d'Ivoire & Ghana! </p>
+            <!-- button here (stretch feature) -->
+          </div>
+          <!-- image here-->
+           <img id="modal-image" src=https://bartalks.net/wp-content/uploads/2022/02/David_Kebu_Jnr_walks_through_his_cocoa_farm_with_son_Snider_and_daughter_Hadasha._10691431963.jpg>
+        </div>
+
+      </div>
+<!--- Splash Screen code starts here --->
+     <div class="Splash">
+       <h1 class = "Splash-Header"> Welcome to...
+       </h3>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<!--- Splash Screen code ends here ---> 
+       
+  </main>
+  <!--- Add above the closing body tag </body> --->
+  <script src="index.js"></script>
+</body>
+
+</html>

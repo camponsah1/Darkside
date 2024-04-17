@@ -1,0 +1,438 @@
+/* Splash Screen Code */
+.Splash{
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height:100%;
+  width:100%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, rgb(255, 103, 20) 1.9%, rgb(225, 102, 20) 12.2%,rgb(210, 55, 109) 76.5%);  
+  transition: all ease-in-out 0.5s;
+}
+.hidden{
+  transition: 0.5s;
+  display: none;
+}
+
+.Splash-Header{
+  height:100%;
+  justify-content: center;
+  font-size: 3em;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  animation: drip 1s infinite linear;
+  margin-top: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: inline-block;
+}
+
+
+/* Splash Screen Code ends here */
+
+/* New Theme Buttom Code */
+#theme-button-new{
+  background-color: black;
+  color:black;
+  font-family: Haettenschweiler;
+  border: 1px solid white;
+  border-color:black;
+}
+/* New Theme Buttom Code ends here */
+main {
+  text-align: center;
+  display: block;
+  
+}
+
+p {
+  color: white; 
+  margin-left: 50px ;
+  margin-right: 50px;
+}
+
+
+body {
+ font-family: 'Gadugi';
+ background-color: black;
+}
+/* Drop Code starts here */
+.header-container{
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  overflow:hidden;
+  font-size: 4.5em;
+  color: #43250a;
+  text-shadow: 0 0 10px #76432e, 0 0 20px #552c16, 0 0 40px #64370c;
+  animation: drip 1s infinite linear;
+  font-family: 'Nosifer', sans-serif;
+}
+.drop{
+  position: absolute;
+  top: 65%;
+  width: .25em;
+  height: .25em;
+  border-radius: 0 100% 100% 100%;
+  box-shadow: 1px 1px 3 px #76432e;
+  animation: drop 3s infinite both;
+  background-color: #43250a;
+}
+.drop:nth-child(1){
+  left: 10%;
+}
+.drop:nth-child(2){
+  left: 39%;
+  animation-delay: -.5s;
+  width: .2em;
+  height: .2em;
+}
+.drop:nth-child(3){
+  left: 55%;
+  animation-delay: -1.5s;
+}
+.drop:nth-child(4){
+  left: 88%;
+  width: .16em;
+  height: .16em;
+  animation-delay:-.10s;
+}
+.drop:nth-child(5){
+  left: 35%;
+  animation-delay: -1s;
+}
+.drop:nth-child(6){
+  left: 55%;
+  animation-delay:-1.5s;
+}
+.drop:nth-child(7){
+  left: 3%;
+  animation-delay: -.5s;
+}
+@keyframes drop{
+  0%{
+    transform: translateY(0) sclaeX(.85) rotate(45deg);
+    animation-timing-function: ease-out;
+  }
+  60%{
+    transform: translateY(120%) scaleX(.85) rotate(45deg);
+    animation-timing-function: ease-in;
+  }
+  80%, 100%{
+    transform: translateY(50vh) scaleX(.85) rotate(45deg);
+  }
+
+  }
+@keyframes drip {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1.75px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Drop code ends here */
+
+/* Slideshow code starts here */
+.slideshow-container {
+  max-width: 80px;
+  position: relative;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+  border: 3px solid white;
+  border-radius: 10px;
+  box-shadow: -10px 10px 5px #413e3e;
+  margin: 80px;
+  
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* Slideshow code ends here */
+
+.headcarry{
+  width: 30%;
+   border: 3px solid white;
+  border-radius: 10px;
+   box-shadow: -10px 20px 5px #413e3e;
+  max-width: 100%;
+  height: 100%;
+
+}
+.hatcocoa{
+  width: 30%;
+   border: 3px solid white;
+  border-radius: 10px;
+   box-shadow: -10px 20px 5px #413e3e;
+  max-width: 100%;
+  height: 100%;
+  gap: 80px;
+
+}
+.child-traffick-pic{
+  display: flex;
+  align-items:flex-end;
+  width: 30%;
+  border: 3px solid white;
+  border-radius: 10px;
+   box-shadow: -10px 20px 5px #413e3e;
+  max-width: 100%;
+  height: 100%;
+  gap: 10px;
+
+}
+.child-traffick{
+  display: flex;
+  width: 95%;
+  padding-right: 10px;
+  gap: 100px;
+  padding-top: 100px;
+}
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+   overflow: hidden;
+  position: fixed;
+    top: 0;
+    width: 100%;
+  align-items: center;
+  font-family: Haettenschweiler;
+  font-size: 25px;
+  background-color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+
+a{
+  color:#efe1af;
+  text-decoration: none;
+}
+.footer{
+  font-family: "Curlz MT";
+}
+
+.TenCompanies{
+  color:#efe1af;
+  text-decoration: underline;
+  font: 'Gadugi';
+}
+
+/* Petition code */ 
+.petition-container{
+  display: flex;
+  flex-direction: row;
+}
+.petition-para{
+  width: 55%;
+  padding-right: 10px;
+}
+.signatures{
+  width:45%;
+  padding-right:10px ;
+}
+#petition-header{
+  color: white;
+}
+.petition-label{
+  color: white;
+}
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background:pink;
+}
+/* the modal that covers the background and prevents user interactions */
+.modal {
+  display: none; /* hides the modal from view by default*/
+  position: fixed; /* keeps the modal in one place */
+  z-index: 2; /* positions the modal on top of all other elements on the screen */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* 40% opacity black - other elements can still be seen */
+  flex-direction: column; /* these flexbox rules center the content on the screen */
+  align-items: center;
+  justify-content: center;
+}
+
+/* box that contains all the content and images */
+.modal-content {
+  background-color: #a64c1c; /* update the colors and font sizes as you like */
+  color: black;
+  text-align: center;
+  font-size: 1rem;
+  display: flex; /* adds flexbox to center all items */
+  justify-content: center;
+  align-items: center;
+}
+
+#thanks-modal-content {
+  width: 20rem; /* sets a default width for the text container */
+}
+
+#modal-text-container {
+  display: flex; /* adds flexbox to center the text and buttons (stretch feature) */
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+}
+/* Modal ends here*/
+/* Add style to button */
+#theme-button{
+  background-color: black;
+  color:#efe1af;
+  font-family: Haettenschweiler;
+  border: 1px solid white;
+  border-color:#efe1af;
+
+}
+
+/* Customize Light Mode Theme */
+.light-mode{
+      background-color: #7b4832;
+      .header-container{
+        color: #efe1af;
+        text-shadow: 0 0 10px #eae1a9, 0 0 20px #eec181, 0 0 40px #e2b06a;
+      } 
+  .navbar{
+    background-color: #7b4832;
+  }
+ .drop{
+   position: absolute;
+   top: 65%;
+   width: .25em;
+   height: .25em;
+   border-radius: 0 100% 100% 100%;
+   box-shadow: 1px 1px 3 px #eae1a9;
+   animation: drop 3s infinite both;
+   background-color: #eae1a9;
+ } 
+  .body{
+    font-family:"Curlz MT";
+  }
+  #theme-button{
+    background-color: white;
+    color: #6f4e2f;
+  }
+  .hatcocoa{
+    border-radius: 80px;
+    border-color: white;
+    box-shadow: none;
+  }
+  .headcarry{
+    border-radius: 60px;
+    border-color: white;
+    box-shadow: none;
+    height:120%;
+  }
+  .footer-text{
+    background-color:#8b4a32;
+    color:white;
+  }
+  .footer{
+    background-color: #8b4a32;
+  }
+  #theme-button-new{
+    background-color: #7b4832;
+    color:#7b4832;
+    font-family: Haettenschweiler;
+    border: 1px solid white;
+    border-color:#7b4832;
+  
+}
+}

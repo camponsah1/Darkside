@@ -1,0 +1,175 @@
+//HTML CODE:
+
+ <div class="petition" id="petition">
+
+        <h3>📢Sign Our Petition! 📢</h3>
+        <div class="petition-container">
+
+
+          <div class="petition-para">
+            <p> Sign this petition to potentionally put an end to child labour in Ghana & Côte d'Ivoire</p>
+          </div>
+
+          <div class="signatures">
+            <p>🖊️ Cherry from Lawrenceville supports this.</p>
+            <p>🖊️  Aderinsola from Lawrenceville supports this.</p>
+            <p>🖊️ Jadyn from Lawrenceville supports this.</p>
+            <p id="counter" >🖊️ 3 people have signed this petition and support this cause. </p>
+          </div>
+
+        </div>
+<br>
+<br>
+      <div>
+      <!--- Sign Petition Form --->
+      <form id="sign-petition" title="sign-petition">
+        <!-- inputs go here -->
+        <i class="fa-regular fa-user"></i>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <i class="fa-regular fa-envelope"></i>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+         <i class="fa-light fa-city"></i>
+        <label for="hometown-state">Hometown and State:</label>
+        <input type="text" id="hometown-state" name="hometown-state">
+      </form>
+        </div>
+<br>
+<br>
+      <div>
+       <!--- Sign Now Button --->
+      <button type="submit" id="sign-now-button">Submit</button>
+      </div>
+
+    </div>
+
+
+//CSS CODE:
+
+#petition{
+  color: white;
+}
+
+.petition-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: white;
+}
+.petition-para{
+  width: 55%;
+  padding-right: 10px;
+}
+.signatures{
+  width: 45%;
+  padding-right: 10px;
+}
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background:pink;
+}
+.fa-regular fa-user{
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//JAVASCRIPT CODE:
+
+// Petition code starts here //
+// Add your query for the sign now button here
+var signNowButton = document.getElementById("sign-now-button");
+
+const addSignature = (event) => {
+  // Prevent default behavior
+  event.preventDefault();
+
+  // Write your code to manipulate the DOM here
+  let name = document.getElementById('name').value;
+  let hometown = document.getElementById('hometown-state').value;
+  let email = document.getElementById('email').value;
+  let count = 3 .remove();
+  count = count + 1;
+   "🖊️" + count + " people have signed this petition and support this cause.";
+
+  // Print info
+  console.log(name);
+  console.log(email);
+  console.log(hometown);
+
+}
+
+// Add a click event listener to the sign now button here
+signNowButton.addEventListener('click', validateForm);
+
+const form = document.getElementById('sign-petition');
+
+
+
+
+
+
+// Petition form validation
+
+
+const validateForm = () => {
+
+  let containsErrors = false;
+
+  let petitionInputs = document.getElementById("sign-petition").elements;
+
+  for (let i = 0; i < petitionInputs.length; i++) {
+    if (petitionInputs[i].value.length < 2) {
+      petitionInputs[i].classList.add('error');
+      containsErrors = true;
+    }
+    else {
+      petitionInputs[i].classList.remove('error');
+    }
+  }
+}
+for (let i = 0; i < petitionInputs.length; i++) {
+    if (containsErrors == false) {
+      petitionInputs[i].value = "";
+      containsErrors = false;
+    }
+    else {
+      addSignature();
+    }
+  }
+
+const email = document.getElementById('email');
+
+if (!email.value.includes('.com')) {
+  containsErrors = true;
+  email.classList.add('error');
+}
+else{
+  email.classList.remove('error');
+}
+
+// Petition code ends here
+
+
